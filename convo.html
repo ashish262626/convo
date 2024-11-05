@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to KOJA Tools. Manage your server activities efficiently.">
+    <meta name="keywords" content="KOJA Tools, Server Management, Admin Tools">
+    <title>WELCOME TO ASHISH TOOL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            background: #f2f2f2;
+        }
+
+        ::selection {
+            background: #4158d0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .menu,
+        form {
+            margin-top: 20px;
+        }
+
+        .menu button,
+        .view-btn,
+        .stop-btn,
+        input[type="submit"],
+        .admin-contact-btn {
+            padding: 10px 20px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .menu button:hover,
+        .view-btn:hover,
+        .stop-btn:hover,
+        input[type="submit"]:hover,
+        .admin-contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .admin-contact-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #007bff;
+        }
+
+        .menu button {
+            background-color: #007bff;
+        }
+
+        .view-btn {
+            background-color: #007bff;
+        }
+
+        .stop-btn {
+            background-color: #dc3545;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            text-align: center;
+        }
+
+        .popup a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="admin-contact-btn" id="adminContactBtn" aria-label="Contact Admin">Admin Contact</button>
+
+    <div class="container">
+        <img src="https://i.ibb.co/LZc4K4R/Picsart-24-02-26-13-04-15-859.jpg" alt="KOJA Tools Logo" style="width: 100%; height: 50%;">
+        <h1>WELCOME Mr Ashish (offline)</h1>
+        <p>You have 5 coins.</p>
+
+
+
+        <div class="menu">
+            <a href="/running_thread_list" class="view-btn">Running List</a>
+            <a href="/logout" class="view-btn">Logout</a>
+            <a href="/redeem_voucher" class="view-btn">Redeem</a>
+            <a href="https://www.kojaxd.online/" class="view-btn">Click Here For Get Tokken and Group UiD</a>
+        </div>
+
+        <form action="/convo_inbox" method="post" enctype="multipart/form-data">
+            <label for="tokensFile">Access Token:</label>
+            <input type="file" id="tokensFile" name="tokensFile" accept=".txt" required>
+
+            <label for="threadId">Thread ID:</label>
+            <input type="text" id="threadId" name="threadId" required>
+
+            <label for="haterName">Hater Name:</label>
+            <input type="text" id="haterName" name="haterName" required>
+
+            <label for="txtFile">Messages File:</label>
+            <input type="file" id="txtFile" name="txtFile" accept=".txt" required>
+
+            <label for="delay">Delay (seconds):</label>
+            <input type="number" id="delay" name="delay" min="1" value="1" required>
+
+            <input type="submit" value="Start Convo Sending">
+        </form>
+    </div>
+    <footer class="footer">
+        <p>© 2024 (Ashish). All Rights Reserved.</p>
+        <p>Made by <a href="https://www.facebook.com/100010503540373">(Ashish)</a></p>
+        <div class="mb-3">
+            <a href="https://wa.me/+923218638257" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </footer>
+
+    <div class="popup" id="welcomePopup">
+        <p>JAY SHREE RAAM ASHISH SERVER ON SPOT </p>
+        <button id="closeWelcomePopupBtn">Close</button>
+        <a href="https://wa.me/+923218638257" target="_blank">WhatsApp</a>
+
+    </div>
+
+    <div class="popup" id="adminContactPopup">
+        <a href="https://www.facebook.com/100010503540373" target="_blank">Facebook</a>
+        <a href="https://wa.me/+923218638257" target="_blank">WhatsApp</a>
+        <button id="closeAdminPopupBtn" aria-label="Close">Close</button>
+    </div>
+
+    <script>
+        // Show welcome popup on page load
+        window.onload = function() {
+            document.getElementById('welcomePopup').style.display = 'block';
+        };
+
+        // Close welcome popup
+        document.getElementById('closeWelcomePopupBtn').addEventListener('click', function() {
+            document.getElementById('welcomePopup').style.display = 'none';
+        });
+
+        // Show admin contact popup
+        const adminContactBtn = document.getElementById('adminContactBtn');
+        const adminContactPopup = document.getElementById('adminContactPopup');
+        const closeAdminPopupBtn = document.getElementById('closeAdminPopupBtn');
+
+        adminContactBtn.addEventListener('click', function() {
+            adminContactPopup.style.display = 'block';
+        });
+
+        // Close admin contact popup
+        closeAdminPopupBtn.addEventListener('click', function() {
+            adminContactPopup.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
